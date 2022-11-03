@@ -4,6 +4,11 @@ overrides:
   constructs: 10.1.142
   aws-cdk-lib: 2.39.1
 
+patchedDependencies:
+  '@serverless-stack/core@1.15.16':
+    hash: qpjazyolifj4coo3ue3e3dze74
+    path: patches/@serverless-stack__core@1.15.16.patch
+
 importers:
 
   .:
@@ -12,6 +17,7 @@ importers:
       '@serverless-stack/core': 1.15.16
       '@serverless-stack/resources': 1.15.16
       '@serverless-stack/static-site-env': 1.15.16
+      '@types/fs-extra': ^9.0.13
       '@types/node': ^14.18.21
       aws-cdk-lib: 2.39.1
       chalk: ^4.0.0
@@ -23,9 +29,10 @@ importers:
       typescript: ^4.8.3
     devDependencies:
       '@serverless-stack/cli': 1.15.16_constructs@10.1.142
-      '@serverless-stack/core': 1.15.16
+      '@serverless-stack/core': 1.15.16_qpjazyolifj4coo3ue3e3dze74
       '@serverless-stack/resources': 1.15.16
       '@serverless-stack/static-site-env': 1.15.16
+      '@types/fs-extra': 9.0.13
       '@types/node': 14.18.33
       aws-cdk-lib: 2.39.1_constructs@10.1.142
       chalk: 4.1.2
@@ -931,7 +938,7 @@ packages:
     hasBin: true
     dependencies:
       '@aws-cdk/aws-apigatewayv2-alpha': 2.39.1-alpha.0_3kcaamd3nt4pafu742q64axgea
-      '@serverless-stack/core': 1.15.16
+      '@serverless-stack/core': 1.15.16_qpjazyolifj4coo3ue3e3dze74
       '@serverless-stack/resources': 1.15.16
       aws-cdk: 2.39.1
       aws-cdk-lib: 2.39.1_constructs@10.1.142
@@ -961,7 +968,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@serverless-stack/core/1.15.16:
+  /@serverless-stack/core/1.15.16_qpjazyolifj4coo3ue3e3dze74:
     resolution: {integrity: sha512-Tv/bEKVoAs4E1L+3iq0jwZ8/azT4DWmZiV8e65Uk4f76E3uNruRAPqDxVOo5Ocx2Z4N8mmRg+SYgwdU9uZFSYA==}
     dependencies:
       '@serverless-stack/aws-lambda-ric': 2.0.13
@@ -1011,6 +1018,7 @@ packages:
       - supports-color
       - utf-8-validate
     dev: true
+    patched: true
 
   /@serverless-stack/resources/1.15.16:
     resolution: {integrity: sha512-4PeLRMqfpgHlzhW0qpTBJpZkqejb5q73dY0/ozFQGPUXw5Xn2XjYo9IHrD9rqRsTXGWOoQhqobNsceTYQWCL6Q==}
@@ -1020,7 +1028,7 @@ packages:
       '@aws-cdk/aws-apigatewayv2-integrations-alpha': 2.39.1-alpha.0_ffv4wuc25taf6qwaefcs7uwlj4
       '@aws-cdk/aws-appsync-alpha': 2.39.1-alpha.0_3kcaamd3nt4pafu742q64axgea
       '@aws-sdk/client-codebuild': 3.202.0
-      '@serverless-stack/core': 1.15.16
+      '@serverless-stack/core': 1.15.16_qpjazyolifj4coo3ue3e3dze74
       archiver: 5.3.1
       aws-cdk-lib: 2.39.1_constructs@10.1.142
       chalk: 4.1.2
@@ -1063,6 +1071,12 @@ packages:
 
   /@tsconfig/node16/1.0.3:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
+    dev: true
+
+  /@types/fs-extra/9.0.13:
+    resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
+    dependencies:
+      '@types/node': 14.18.33
     dev: true
 
   /@types/json5/0.0.29:
