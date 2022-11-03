@@ -1,0 +1,24 @@
+{
+  "name": "@eig-sst-test/service2",
+  "version": "0.0.1",
+  "main": "./dist/stacks/index.js",
+  "files": [
+    "./dist/**/*"
+  ],
+  "scripts": {
+    "start": "exit 0; tsc --declaration --outDir ./dist --watch --preserveWatchOutput",
+    "build": "tsc --declaration --outDir ./dist",
+    "sst:start": "sst start --increase-timeout",
+    "sst:build": "sst build",
+    "sst:deploy": "sst deploy",
+    "sst:update": "sst update",
+    "sst:remove": "sst remove",
+    "lint": "eslint src/**/*.{ts,js,cts,cjs,mts,mjs}",
+    "lint:fix": "TIMING=1 eslint src/**/*.{ts,js,cts,cjs,mts,mjs} --fix"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3"
+  },
+  "dependencies": {},
+  "type": "module"
+}

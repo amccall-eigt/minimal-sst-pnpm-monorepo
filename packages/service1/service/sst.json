@@ -1,0 +1,5 @@
+{
+  "name": "service1",
+  "region": "us-west-2",
+  "main": "./stacks/local.ts"
+}

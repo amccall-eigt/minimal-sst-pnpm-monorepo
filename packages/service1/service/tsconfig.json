@@ -1,0 +1,15 @@
+{
+  "extends": "@tsconfig/node16",
+  "exclude": [
+    "node_modules",
+    "tmp",
+    "./dist/**/*"
+  ],
+  "include": ["./**/*.ts"],
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "Node16",
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  }
+}
